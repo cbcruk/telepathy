@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  height: 72px;
+  background-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.12);
+}
+
+.thumbnail {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--padding-default);
+  padding-right: calc(var(--padding-default) + 10px);
+}
+
+.name {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.icon {
+  margin-right: 5px;
+}

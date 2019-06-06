@@ -1,0 +1,13 @@
+.wrapper {
+  width: 99px;
+  height: 36px;
+  border-radius: 4px;
+  background: #bb86fc;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 1);
+  transition: all 0.3s;
+}
+
+.wrapper:disabled {
+  color: rgba(0, 0, 0, 0.38);
+}

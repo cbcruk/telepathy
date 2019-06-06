@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 56px;
+  padding-right: var(--padding-default);
+  padding-left: var(--padding-default);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: #121212;
+}
+
+.title {
+  padding-right: var(--padding-default);
+  padding-left: var(--padding-default);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-weight: normal;
+}

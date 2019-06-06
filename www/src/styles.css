@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --typo-headline1: 96px;
+  --typo-headline2: 60px;
+  --typo-headline3: 48px;
+  --typo-headline4: 34px;
+  --typo-headline5: 24px;
+  --typo-headline6: 20px;
+  --typo-subtitle1: 16px;
+  --typo-subtitle2: 14px;
+  --typo-body1: 16px;
+  --typo-body2: 14px;
+  --typo-button: 14px;
+  --typo-caption: 12px;
+  --typo-overline: 10px;
+
+  --padding-default: 16px;
+}
+
+html {
+  background-color: #121212;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+svg {
+  vertical-align: top;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+img[src=''] {
+  display: none;
+}

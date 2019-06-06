@@ -1,0 +1,28 @@
+.wrapper {
+  padding: var(--padding-default);
+}
+
+.wrapper .submit {
+  margin-top: 16px;
+}
+
+.textarea {
+  width: 100%;
+  height: calc(54px * 2);
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 3.5px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  caret-color: #bb86fc;
+  outline: none;
+}
+
+.textarea:focus {
+  border-color: #bb86fc;
+}
+
+.submit {
+  display: flex;
+  justify-content: flex-end;
+}

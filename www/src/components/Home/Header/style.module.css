@@ -1,0 +1,8 @@
+.wrapper {
+  padding: var(--padding-default);
+}
+
+.link {
+  display: block;
+  line-height: 1;
+}

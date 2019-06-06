@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: var(--padding-default);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.body {
+  max-width: 90%;
+}
+
+.name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.percent {
+  display: inline-grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 10px;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.index {
+  font-size: 12px;
+}
+
+.surface:global(.mdc-ripple-surface::before),
+.surface:global(.mdc-ripple-surface::after) {
+  background-color: #bb86fc;
+}

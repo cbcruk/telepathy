@@ -1,0 +1,13 @@
+.wrapper {
+  min-height: -webkit-fill-available;
+}
+
+.slogan {
+  margin-top: 34px;
+  padding-right: var(--padding-default);
+  padding-left: var(--padding-default);
+}
+
+.categories {
+  margin-top: 70px;
+}

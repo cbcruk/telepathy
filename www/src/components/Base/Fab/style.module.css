@@ -1,0 +1,17 @@
+.wrapper {
+  position: fixed;
+  right: var(--padding-default);
+  bottom: var(--padding-default);
+  line-height: 1;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #03dac5;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.24);
+}
