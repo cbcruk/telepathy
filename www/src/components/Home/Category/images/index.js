@@ -8,6 +8,7 @@ import movie from './movie.jpeg'
 import music from './music.jpeg'
 import news from './news.jpeg'
 import sport from './sport.jpeg'
+import education from './education.jpeg'
 
 export default {
   entertainment,
@@ -19,5 +20,6 @@ export default {
   movie,
   music,
   news,
-  sport
+  sport,
+  education
 }
