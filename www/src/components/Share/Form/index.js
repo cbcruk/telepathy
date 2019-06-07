@@ -24,9 +24,9 @@ const Form = ({ item, isSupportShare }) => (
             url: shareUrl
           })
 
-          console.log('Successful share')
+          history.go(-1)
         } catch (error) {
-          console.log('Error sharing', error)
+          console.error(error)
         }
       } else {
         const { Kakao } = window
@@ -37,13 +37,14 @@ const Form = ({ item, isSupportShare }) => (
           link: {
             mobileWebUrl: shareUrl,
             webUrl: shareUrl
+          },
+          callback() {
+            history.go(-1)
           }
         })
       }
 
       setSubmitting(false)
-
-      history.go(-1)
     }}
   >
     {({ values, handleChange, handleSubmit, isSubmitting }) => (
