@@ -3,6 +3,8 @@ import { Formik } from 'formik'
 import Button from './Button'
 import styles from './style.module.css'
 
+const { history } = window
+
 const Form = ({ item, isSupportShare }) => (
   <Formik
     initialValues={{
@@ -40,6 +42,8 @@ const Form = ({ item, isSupportShare }) => (
       }
 
       setSubmitting(false)
+
+      history.go(-1)
     }}
   >
     {({ values, handleChange, handleSubmit, isSubmitting }) => (
