@@ -5,12 +5,13 @@ import styles from './style.module.css'
 
 const { history } = window
 
-const Form = ({ item, isSupportShare }) => (
+const Form = ({ item }) => (
   <Formik
     initialValues={{
       text: ''
     }}
     onSubmit={async (values, { setSubmitting }) => {
+      const isSupportShare = navigator.share
       const params = new URLSearchParams({
         q: item.name
       })
