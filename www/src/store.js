@@ -5,7 +5,8 @@ import rootEpic from './epics'
 import { fetchItems } from './actions'
 
 const composeEnhancers =
-  (typeof window !== 'undefined' &&
+  (process.env.NODE_ENV === 'development' &&
+    typeof window !== 'undefined' &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
   compose
 
