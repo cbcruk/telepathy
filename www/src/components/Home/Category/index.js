@@ -10,6 +10,11 @@ const Category = ({ name, total, className, ...props }) => (
   <LinkWithRipple
     href={`/channel?category=${name}`}
     className={classNames([className, styles.wrapper])}
+    onNavigate={() =>
+      window.gtag('event', 'view_item_list', {
+        event_label: name
+      })
+    }
     {...props}
   >
     <img

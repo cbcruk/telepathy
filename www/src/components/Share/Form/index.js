@@ -46,6 +46,12 @@ const Form = ({ item }) => (
       }
 
       setSubmitting(false)
+
+      window.gtag('event', 'share', {
+        method: isSupportShare ? 'web' : 'kakao',
+        event_label: item.name,
+        value: item.percent
+      })
     }}
   >
     {({ values, handleChange, handleSubmit, isSubmitting }) => (

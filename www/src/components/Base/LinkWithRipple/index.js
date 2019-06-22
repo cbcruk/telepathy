@@ -10,12 +10,16 @@ const LinkWithRipple = ({
   className,
   initRipple,
   children,
+  onNavigate,
   ...props
 }) => {
   const [clickCallback] = useEventCallback(event$ =>
     event$.pipe(
       delay(400),
-      tap(() => navigate(href))
+      tap(() => {
+        navigate(href)
+        onNavigate()
+      })
     )
   )
 
