@@ -18,7 +18,7 @@ const LinkWithRipple = ({
       delay(400),
       tap(() => {
         navigate(href)
-        onNavigate()
+        onNavigate && onNavigate()
       })
     )
   )
