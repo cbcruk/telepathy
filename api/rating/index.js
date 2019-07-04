@@ -24,9 +24,10 @@ const memRating = mem(
           .text()
           .trim()
 
-        const [, percent, name] = /^\d+.\d+%/.test(title)
-          ? title.match(/(^\d+.\d+%)\s(.+)/i)
-          : ['', '', title]
+        const indexOfPercent = title.indexOf('%')
+        const percent =
+          (indexOfPercent === -1 ? 0.01 : title.slice(0, indexOfPercent)) + '%'
+        const name = title.slice(indexOfPercent + 2)
 
         const [category, time = ''] = $item
           .find('.txt_info')
