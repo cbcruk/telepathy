@@ -1,18 +1,26 @@
-import { SET_ITEMS, SET_CATEGORY, SET_ID, FETCH_ITEMS } from '../actions/types'
+import { SET_ITEMS, SET_CATEGORY, SET_ID, FETCH_ITEMS, FETCH_ITEMS_REJECTED } from '../actions/types'
 
 const initialState = {
   items: [],
   category: '',
   id: '',
-  isFetching: false
+  isFetching: false,
+  error: {}
 }
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case FETCH_ITEMS:
       return {
         ...state,
         isFetching: true
+      }
+    case FETCH_ITEMS_REJECTED:
+      return {
+        ...state,
+        items: [],
+        isFetching: false,
+        error: action.payload
       }
     case SET_ITEMS:
       return {

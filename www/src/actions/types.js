@@ -1,4 +1,5 @@
 export const FETCH_ITEMS = 'FETCH_ITEMS'
+export const FETCH_ITEMS_REJECTED = 'FETCH_ITEMS_REJECTED'
 export const SET_ITEMS = 'SET_ITEMS'
 export const SET_CATEGORY = 'SET_CATEGORY'
 export const SET_ID = 'SET_ID'
