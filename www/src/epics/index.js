@@ -1,6 +1,13 @@
 import { of, timer } from 'rxjs'
 import { ajax } from 'rxjs/ajax'
-import { map, catchError, switchMapTo, pluck } from 'rxjs/operators'
+import {
+  map,
+  catchError,
+  switchMapTo,
+  pluck,
+  distinctUntilChanged
+} from 'rxjs/operators'
+import isEqual from 'lodash/isEqual'
 import { combineEpics, ofType } from 'redux-observable'
 import { setItems } from '../actions'
 import { FETCH_ITEMS, FETCH_ITEMS_REJECTED } from '../actions/types'
@@ -24,7 +31,8 @@ const ajaxWithTimer$ = timer$.pipe(switchMapTo(ajax$))
 const fetchEpic = action$ =>
   action$.pipe(
     ofType(FETCH_ITEMS),
-    switchMapTo(ajaxWithTimer$)
+    switchMapTo(ajaxWithTimer$),
+    distinctUntilChanged(isEqual)
   )
 
 const rootEpic = combineEpics(fetchEpic)
