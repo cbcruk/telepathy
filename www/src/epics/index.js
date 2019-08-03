@@ -26,13 +26,14 @@ const ajax$ = ajax.getJSON('/api/rating').pipe(
   catchError(error$)
 )
 
-const ajaxWithTimer$ = timer$.pipe(switchMapTo(ajax$))
+const ajaxWithTimer$ = timer$
+  .pipe(switchMapTo(ajax$))
+  .pipe(distinctUntilChanged(isEqual))
 
 const fetchEpic = action$ =>
   action$.pipe(
     ofType(FETCH_ITEMS),
-    switchMapTo(ajaxWithTimer$),
-    distinctUntilChanged(isEqual)
+    switchMapTo(ajaxWithTimer$)
   )
 
 const rootEpic = combineEpics(fetchEpic)
