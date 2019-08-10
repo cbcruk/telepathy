@@ -1,0 +1,5 @@
+.item {
+  position: absolute;
+  width: 100%;
+  will-change: transform, height, opacity;
+}

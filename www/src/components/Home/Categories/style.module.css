@@ -11,6 +11,7 @@
 
 .row {
   display: flex;
+  will-change: transform, opacity;
 }
 
 .row:nth-child(even) {
