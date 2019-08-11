@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTransition, useSpring, animated } from 'react-spring'
+import { useTransition, animated } from 'react-spring'
 import classNames from 'classnames'
 import chunk from 'lodash/chunk'
 import Category from '../Category'
