@@ -7,6 +7,8 @@ const useId = (id, action) => {
 
   useEffect(() => {
     setId(id)
+
+    return () => setId(0)
   }, [id, setId])
 }
 
